@@ -37,6 +37,16 @@
 			<Add directory="lib" />
 		</Linker>
 		<Unit filename="main.cpp" />
+		<Unit filename="rax-master/rax.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="rax-master/rax.h" />
+		<Unit filename="rax-master/rax_malloc.h" />
+		<Unit filename="rax-master/rax_oom_malloc.h" />
+		<Unit filename="rax-master/rc4rand.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="rax-master/rc4rand.h" />
 		<Extensions>
 			<code_completion />
 			<envvars />

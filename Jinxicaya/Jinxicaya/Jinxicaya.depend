@@ -342,3 +342,18 @@
 	"begin_code.h"
 	"close_code.h"
 
+1517643607 source:c:\users\yuki\documents\gitsides\kkcollab\jinxicaya\jinxicaya\rax-master\rax.c
+	<stdlib.h>
+	<string.h>
+	<assert.h>
+	<stdio.h>
+	<errno.h>
+	<math.h>
+	"rax.h"
+
+1517643608 c:\users\yuki\documents\gitsides\kkcollab\jinxicaya\jinxicaya\rax-master\rax.h
+	<stdint.h>
+
+1517643608 source:c:\users\yuki\documents\gitsides\kkcollab\jinxicaya\jinxicaya\rax-master\rc4rand.c
+	<stdint.h>
+
