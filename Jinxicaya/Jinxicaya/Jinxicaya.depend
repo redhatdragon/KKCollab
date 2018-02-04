@@ -1,5 +1,5 @@
 # depslib dependency file v1.0
-1517658126 source:c:\users\yuki\documents\gitsides\kkcollab\jinxicaya\jinxicaya\main.cpp
+1517659878 source:c:\users\yuki\documents\gitsides\kkcollab\jinxicaya\jinxicaya\main.cpp
 	<iostream>
 	<fstream>
 	<SDL2/SDL.h>

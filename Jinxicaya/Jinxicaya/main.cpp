@@ -5,6 +5,8 @@
 extern "C"{
     #include "rax-master/rax.h"
 }
+#include "tinydir.h"
+#include "BluePyroLibraries/IO/IO.h"
 
 using namespace std;
 
@@ -31,11 +33,28 @@ void addFileToTree(const char *fileName){
         cout << "Error: Can't read file!" << endl;
     }
 }
+#define LOOP_ALL_FILES_OF_EXTENSION(_dir, _ext) \
+{ \
+    tinydir_dir dir; \
+    if(!_dir.length()){ \
+        tinydir_open(&dir, "."); \
+    }else{ \
+        tinydir_open(&dir, _dir.c_str()); \
+    } \
+    while (dir.has_next){ \
+        tinydir_file file; \
+        tinydir_readfile(&dir, &file); \
+
+#define LOOP_ALL_FILES_OF_EXTENSION_END() \
+        tinydir_next(&dir); \
+    } \
+    tinydir_close(&dir); \
+}
 
 int main(int argc, char** argv){
 
     rt = raxNew();
     addFileToTree("twilight0_patterns.txt");
-    raxShow(rt);
+    //raxShow(rt);
     return 0;
 }
