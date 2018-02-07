@@ -12,20 +12,20 @@ extern "C"{
 using namespace std;
 
 rax *rt = raxNew();
-int highest = 0;
-int totalCount = 0;
+int highestDepth = 0;
+int totalNodeCount = 0;
 
 void addToTree(unsigned char *_str, int _length){
     void *counter = new int(0);
     if(raxInsert(rt,_str,_length,counter,NULL)){
         counter = raxFind(rt,_str,_length);
         counter = (int *)counter+1;
-        if(highest < (int)counter){
-            highest = (int)counter;
+        if(highestDepth < (int)counter){
+            highestDepth = (int)counter;
         }
         return;
     }
-    totalCount++;
+    totalNodeCount++;
 }
 void addFileToTree(const char *fileName){
     string line;
@@ -79,8 +79,6 @@ void addBinFileRepeat(const char *fileName, int _count){
             //raxShow(rt);
             raxFree(rt);
         }
-        //cout << highest << endl;
-        cout << totalCount << endl;
         return;
     }
     printf("Error: can't open file!");
@@ -108,6 +106,7 @@ int main(int argc, char** argv){
     rt = raxNew();
     //addFileToTreeRepeat("twilight0_patterns.txt", 63750);
     addBinFileRepeat("twilight0.eth", 63750);
+    cout << totalNodeCount << endl;
     //raxShow(rt);
 
     /*LOOP_ALL_FILES(string("."))
