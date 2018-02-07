@@ -8,7 +8,7 @@
 
 #ifdef _WIN32
 #include "WindowsKeyboardMouse.h"
-#include "WindowsGetPixel.h"
+//#include "WindowsGetPixel.h"
 #elif defined(LINUX)
 #elif defined(APPLE)
 #endif

@@ -9,7 +9,7 @@ void setupKeyboardListener() {
 }
 
 void printKeyboard() {
-	FOR(int i = 8, i < 191, i++)
+	FOR(char i = 8, i < 191, i++)
 		if (GetAsyncKeyState(i) & 1 == 1) {
 			//printf('%d', i);
 			printf(&i);

@@ -1,7 +1,7 @@
 #pragma once
 
-#define DELETE(_objName, _obj) \
-_objName##Destruct(_obj);
+//#define DELETE(_objName, _obj) \
+//_objName##Destruct(_obj);
 
 #define PRIM_FOR(_num) \
 { \
@@ -20,7 +20,7 @@ _objName##Destruct(_obj);
 
 char* concat(const char *s1, const char *s2)
 {
-	char *result = malloc(strlen(s1) + strlen(s2) + 1);//+1 for the zero-terminator
+	char *result = (char*)malloc(strlen(s1) + strlen(s2) + 1);//+1 for the zero-terminator
 													   //in real code you would check for errors in malloc here
 	strcpy(result, s1);
 	strcat(result, s2);
@@ -48,7 +48,7 @@ __forceinline int BPGetFileSize(char *filename) {
 __forceinline char* BPReadFile(char *filename) {
 	//signed char c;
 	int bufferLength = BPGetFileSize(filename);
-	char *buffer = malloc(bufferLength + 1);
+	char *buffer = (char*)malloc(bufferLength + 1);
 	FILE *file;
 	file = fopen(filename, "r");
 	if (file) {
@@ -99,7 +99,7 @@ __forceinline char* BPGetFilesInDir() {
 	if ((dir = opendir(".")) != NULL) {
 		unsigned int size = 256;
 		unsigned int length = 0;
-		directory = malloc(size);
+		directory = (char*)malloc(size);
 		while ((ent = readdir(dir)) != NULL) {
 			unsigned int count = 0;
 			while (1) {
@@ -107,7 +107,7 @@ __forceinline char* BPGetFilesInDir() {
 					directory[length] = ent->d_name[count];
 					count++;
 					length++;
-					if (ent->d_name[count-1] == 0) { 
+					if (ent->d_name[count-1] == 0) {
 						directory[length - 1] = '\n'; break;
 					}
 				}else{

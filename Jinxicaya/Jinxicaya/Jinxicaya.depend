@@ -1,9 +1,11 @@
 # depslib dependency file v1.0
-1517659878 source:c:\users\yuki\documents\gitsides\kkcollab\jinxicaya\jinxicaya\main.cpp
+1517832707 source:c:\users\yuki\documents\gitsides\kkcollab\jinxicaya\jinxicaya\main.cpp
 	<iostream>
 	<fstream>
+	<stdio.h>
 	<SDL2/SDL.h>
 	<SDL2/SDL_image.h>
+	"tinydir.h"
 	"rax-master/rax.h"
 
 1508783381 c:\users\yuki\documents\gitsides\kkcollab\jinxicaya\jinxicaya\include\sdl2\sdl.h
@@ -359,4 +361,36 @@
 
 1517643608 source:c:\users\yuki\documents\gitsides\kkcollab\jinxicaya\jinxicaya\rax-master\rc4rand.c
 	<stdint.h>
+
+1506963124 c:\users\yuki\documents\gitsides\kkcollab\jinxicaya\jinxicaya\tinydir.h
+	<errno.h>
+	<stdlib.h>
+	<string.h>
+	<windows.h>
+	<tchar.h>
+	<dirent.h>
+	<libgen.h>
+	<sys/stat.h>
+	<stddef.h>
+	<tchar.h>
+	<windows.h>
+	<linux/limits.h>
+	<unistd.h>
+	<sys/types.h>
+
+1517791817 c:\users\yuki\documents\gitsides\kkcollab\jinxicaya\jinxicaya\bluepyrolibraries\io\io.h
+	<dirent.h>
+	<stdio.h>
+	<stdlib.h>
+	<errno.h>
+	"../EnvInfo.h"
+	"IOFile.h"
+	"WindowsKeyboardMouse.h"
+
+1495478789 c:\users\yuki\documents\gitsides\kkcollab\jinxicaya\jinxicaya\bluepyrolibraries\envinfo.h
+
+1517792356 c:\users\yuki\documents\gitsides\kkcollab\jinxicaya\jinxicaya\bluepyrolibraries\io\iofile.h
+
+1517791454 c:\users\yuki\documents\gitsides\kkcollab\jinxicaya\jinxicaya\bluepyrolibraries\io\windowskeyboardmouse.h
+	<windows.h>
 
