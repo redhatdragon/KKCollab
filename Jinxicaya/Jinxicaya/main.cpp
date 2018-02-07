@@ -12,12 +12,12 @@ extern "C"{
 using namespace std;
 
 rax *rt = raxNew();
-int highestDepth = 0;
-int totalNodeCount = 0;
+int highestDepth;
+int totalNodeCount;
 
 void addToTree(unsigned char *_str, int _length){
     void *counter = new int(0);
-    if(raxInsert(rt,_str,_length,counter,NULL)){
+    if(!raxInsert(rt,_str,_length,counter,NULL)){
         counter = raxFind(rt,_str,_length);
         counter = (int *)counter+1;
         if(highestDepth < (int)counter){
@@ -102,11 +102,15 @@ void addBinFileRepeat(const char *fileName, int _count){
 }
 
 int main(int argc, char** argv){
+    highestDepth = 0;
+    totalNodeCount = 0;
 
     rt = raxNew();
     //addFileToTreeRepeat("twilight0_patterns.txt", 63750);
-    addBinFileRepeat("twilight0.eth", 63750);
+    //addFileToTree("twilight0_patterns.txt");
+    addBinFileRepeat("twilight0.eth", 1);
     cout << totalNodeCount << endl;
+    cout << highestDepth << endl;
     //raxShow(rt);
 
     /*LOOP_ALL_FILES(string("."))
